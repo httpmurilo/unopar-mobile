@@ -1,19 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
+        style="@style/EstiloTexto"
+        android:text="Faça seu pedido!"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:hint="Nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox android:id="@+id/checkBacon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Bacon" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <CheckBox android:id="@+id/checkQueijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queijo" />
+
+    <CheckBox android:id="@+id/checkOnion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onion Rings" />
+
+    <TextView
+        style="@style/EstiloTexto"
+        android:text="Quantidade" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textQuantity"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/EstiloTexto"
+        android:text="Resumo do pedido" />
+
+    <TextView
+        style="@style/EstiloTexto"
+        android:id="@+id/textTotal"
+        android:text="R$0" />
+
+    <Button
+        android:id="@+id/buttonOrder"
+        android:text="FAZER PEDIDO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
