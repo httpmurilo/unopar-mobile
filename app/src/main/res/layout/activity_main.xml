@@ -7,6 +7,14 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/imagemhamburger" />
+
     <TextView
         style="@style/EstiloTexto"
         android:text="Faça seu pedido!"
